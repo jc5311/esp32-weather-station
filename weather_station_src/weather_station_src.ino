@@ -95,17 +95,17 @@ void blinkLED(void)
   digitalWrite(LED_PIN,LOW);
 }
 
-float getTemperature(void)
+void getTemperature(void)
 {
   temperature = bme.readTemperature();
 }
 
-float getHumidity(void)
+void getHumidity(void)
 {
   humidity = bme.readHumidity();
 }
 
-float getPressure(void)
+void getPressure(void)
 {
   pressure = bme.readPressure();
   pressure = bme.seaLevelForAltitude(ALTITUDE,pressure);
